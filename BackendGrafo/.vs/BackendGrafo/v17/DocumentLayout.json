@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|c:\\users\\gabri\\onedrive\\documentos\\9b\\desarrollo web integral\\proyecto_grafo\\backendgrafo\\backendgrafo\\presentation\\grafocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\presentation\\grafocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\bll\\grafoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\bll\\grafoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\dal\\graforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\dal\\graforepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\presentation\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\presentation\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\dal\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\dal\\ciudad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\dal\\vertice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\dal\\vertice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\dal\\nodolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\dal\\nodolista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\backendgrafo\\dal\\listaaristas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2FFCCADB-5E50-48A6-A206-3E686F35318D}|BackendGrafo\\BackendGrafo.csproj|solutionrelative:backendgrafo\\dal\\listaaristas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\Presentation\\HomeController.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\Presentation\\HomeController.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\Presentation\\HomeController.cs",
+              "RelativeToolTip": "BackendGrafo\\Presentation\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T22:27:39.581Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GrafoController.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\Presentation\\GrafoController.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\Presentation\\GrafoController.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\Presentation\\GrafoController.cs",
+              "RelativeToolTip": "BackendGrafo\\Presentation\\GrafoController.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAnwDsAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T21:57:26.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Vertice.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\Vertice.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\DAL\\Vertice.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\Vertice.cs",
+              "RelativeToolTip": "BackendGrafo\\DAL\\Vertice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:27:28.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NodoLista.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\NodoLista.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\DAL\\NodoLista.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\NodoLista.cs",
+              "RelativeToolTip": "BackendGrafo\\DAL\\NodoLista.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:26:11.549Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ListaAristas.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\ListaAristas.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\DAL\\ListaAristas.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\ListaAristas.cs",
+              "RelativeToolTip": "BackendGrafo\\DAL\\ListaAristas.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:26:00.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GrafoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\GrafoRepository.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\DAL\\GrafoRepository.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\GrafoRepository.cs",
+              "RelativeToolTip": "BackendGrafo\\DAL\\GrafoRepository.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T21:55:41.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ciudad.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\ciudad.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\DAL\\ciudad.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\ciudad.cs",
+              "RelativeToolTip": "BackendGrafo\\DAL\\ciudad.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T21:55:27.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GrafoService.cs",
+              "DocumentMoniker": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\BLL\\GrafoService.cs",
+              "RelativeDocumentMoniker": "BackendGrafo\\BLL\\GrafoService.cs",
+              "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\BLL\\GrafoService.cs",
+              "RelativeToolTip": "BackendGrafo\\BLL\\GrafoService.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAA0wB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T22:24:58.702Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

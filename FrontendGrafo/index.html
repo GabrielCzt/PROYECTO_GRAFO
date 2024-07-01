@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Grafo</title>
+</head>
+<body>
+    <h1>Visualización de Grafo</h1>
+    <canvas id="grafoCanvas" width="800" height="600"></canvas>
+    <div>
+        <input type="text" id="nombreCiudad" placeholder="Nombre de la ciudad">
+        <input type="number" id="habitantes" placeholder="Total de habitantes">
+        <input type="number" id="superficie" placeholder="Superficie en km²">
+        <button onclick="agregarVertice()">Agregar Vertice</button>
+    </div>
+    <div>
+        <input type="number" id="origen" placeholder="Origen">
+        <input type="number" id="destino" placeholder="Destino">
+        <input type="number" id="costo" placeholder="Costo">
+        <button onclick="agregarArista()">Agregar Arista</button>
+    </div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
