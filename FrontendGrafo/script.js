@@ -93,7 +93,46 @@ function dibujarGrafo() {
     });
 }
 
+async function recorridoDFS() {
+    const inicio = document.getElementById('inicioDFS').value;
+    const response = await fetch(`http://localhost:53113/api/grafo/dfs/${inicio}`);
+    const resultado = await response.json();
+    const nombres = resultado.map(index => vertices[index].NomCiudad);
+    document.getElementById('resultados').innerText = `DFS: ${nombres.join(', ')}`;
+}
 
+async function recorridoBFS() {
+    const inicio = document.getElementById('inicioBFS').value;
+    const response = await fetch(`http://localhost:53113/api/grafo/bfs/${inicio}`);
+    const resultado = await response.json();
+    const nombres = resultado.map(index => vertices[index].NomCiudad);
+    document.getElementById('resultados').innerText = `BFS: ${nombres.join(', ')}`;
+}
+
+async function ordenTopologico() {
+    const response = await fetch('http://localhost:53113/api/grafo/orden-topologico');
+    const resultado = await response.json();
+    const nombres = resultado.map(index => vertices[index].NomCiudad);
+    document.getElementById('resultados').innerText = `Orden topologico: ${nombres.join(', ')}`;
+}
+
+async function ordenTopologicoCamino() {
+    const inicio = document.getElementById('inicioTopSort').value;
+    const fin = document.getElementById('finTopSort').value;
+    const response = await fetch(`http://localhost:53113/api/grafo/orden-topologico-camino/${inicio}/${fin}`);
+    const resultado = await response.json();
+    const nombres = resultado.map(index => vertices[index].NomCiudad);
+    document.getElementById('resultados').innerText = `Orden topologico del camino: ${nombres.join(', ')}`;
+}
+
+async function dijkstra() {
+    const inicio = document.getElementById('inicioDijkstra').value;
+    const fin = document.getElementById('finDijkstra').value;
+    const response = await fetch(`http://localhost:53113/api/grafo/dijkstra/${inicio}/${fin}`);
+    const resultado = await response.json();
+    const nombres = resultado.map(index => vertices[index].NomCiudad);
+    document.getElementById('resultados').innerText = `Dijkstra: ${nombres.join(', ')}`;
+}
 
 
 

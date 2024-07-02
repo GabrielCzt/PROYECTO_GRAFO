@@ -33,10 +33,12 @@ namespace BackendGrafo.BLL
         {
             return GrafoRepository.RecorridoDFS(start);
         }
+
         public List<int> RecorridoBFS(int start)
         {
             return GrafoRepository.RecorridoBFS(start);
         }
+
         public List<int> OrdenTopologico()
         {
             return GrafoRepository.OrdenTopologico();
@@ -51,6 +53,8 @@ namespace BackendGrafo.BLL
         {
             return GrafoRepository.Dijkstra(start, end);
         }
+
+
 
 
     }

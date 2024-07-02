@@ -92,6 +92,7 @@ namespace BackendGrafo.Presentation
             var result = _grafoService.OrdenamientoTopologicoCamino(inicio, fin);
             return Ok(result);
         }
+
         [System.Web.Http.HttpGet]
         [System.Web.Http.Route("api/grafo/dijkstra/{inicio}/{fin}")]
         public IHttpActionResult Dijkstra(int inicio, int fin)
@@ -99,6 +100,7 @@ namespace BackendGrafo.Presentation
             var result = _grafoService.Dijkstra(inicio, fin);
             return Ok(result);
         }
+
 
 
     }

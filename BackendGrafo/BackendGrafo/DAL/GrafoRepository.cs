@@ -1,9 +1,7 @@
-﻿using BackendGrafo.BLL;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Http;
 
 namespace BackendGrafo.DAL
 {
@@ -67,6 +65,7 @@ namespace BackendGrafo.DAL
 
             return visitados;
         }
+
         public static List<int> RecorridoBFS(int start)
         {
             List<int> visitados = new List<int>();
@@ -235,8 +234,5 @@ namespace BackendGrafo.DAL
             else
                 return new List<int>(); // No hay camino
         }
-
-
-
     }
 }
