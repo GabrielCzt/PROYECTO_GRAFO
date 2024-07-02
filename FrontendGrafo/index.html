@@ -1,28 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Grafo</title>
 </head>
+
 <body>
-    <h1>Visualización de Grafo</h1>
-    <canvas id="grafoCanvas" width="800" height="600"></canvas>
-    <div>
-        <input type="text" id="nombreCiudad" placeholder="Nombre de la ciudad">
-        <input type="number" id="habitantes" placeholder="Total de habitantes">
-        <input type="number" id="superficie" placeholder="Superficie en km²">
-        <button onclick="agregarVertice()">Agregar Vertice</button>
-    </div>
-    <div>
-        <input type="number" id="origen" placeholder="Origen">
-        <input type="number" id="destino" placeholder="Destino">
-        <input type="number" id="costo" placeholder="Costo">
-        <button onclick="agregarArista()">Agregar Arista</button>
-    </div>
-   
-    
+    <header>
+        <h1>Visualización de Grafo</h1>
+    </header>
+
+    <main>
+
+
+        <section class="input-section">
+            <h2>Agregar Vértice</h2>
+            <input type="text" id="nombreCiudad" placeholder="Nombre de la ciudad">
+            <input type="number" id="habitantes" placeholder="Total de habitantes">
+            <input type="number" id="superficie" placeholder="Superficie en km²">
+            <button onclick="agregarVertice()">Agregar Vertice</button>
+        </section>
+
+        <section class="input-section">
+            <h2>Agregar Arista</h2>
+            <input type="number" id="origen" placeholder="Origen">
+            <input type="number" id="destino" placeholder="Destino">
+            <input type="number" id="costo" placeholder="Costo">
+            <button onclick="agregarArista()">Agregar Arista</button>
+        </section>
+
+        <canvas id="grafoCanvas" width="800" height="600"></canvas>
+        <div id="resultados"></div>
+        <section class="input-section">
+            <h2>Recorridos</h2>
+            <input type="number" id="inicioDFS" placeholder="Vértice de inicio DFS">
+            <button onclick="recorridoDFS()">Recorrido DFS</button>
+            <input type="number" id="inicioBFS" placeholder="Vértice de inicio BFS">
+            <button onclick="recorridoBFS()">Recorrido BFS</button>
+        </section>
+
+        <section class="input-section">
+            <h2>Ordenamiento Topológico</h2>
+            <input type="number" id="inicioTopSort" placeholder="Inicio">
+            <input type="number" id="finTopSort" placeholder="Fin">
+            <button onclick="ordenTopologicoCamino()">Buscar Camino Topológico</button>
+            <button onclick="ordenTopologico()">Ordenamiento Topológico</button>
+        </section>
+
+        <section class="input-section">
+            <h2>Camino Más Corto (Dijkstra)</h2>
+            <input type="number" id="inicioDijkstra" placeholder="Inicio">
+            <input type="number" id="finDijkstra" placeholder="Fin">
+            <button onclick="dijkstra()">Camino Más Corto (Dijkstra)</button>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <h4>Elaboró:</h4>
+        <ol class="nombres">
+            <li>Janet Concepción Sánchez Reyes</li>
+            <li>Gabriel Castillo López</li>
+        </ol>
+
+        <p>© 2024 Universidad Tecnológica de Puebla.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
