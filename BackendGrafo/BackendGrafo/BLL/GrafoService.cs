@@ -37,6 +37,15 @@ namespace BackendGrafo.BLL
         {
             return GrafoRepository.RecorridoBFS(start);
         }
+        public List<int> OrdenTopologico()
+        {
+            return GrafoRepository.OrdenTopologico();
+        }
+
+        public List<int> OrdenamientoTopologicoCamino(int start, int end)
+        {
+            return GrafoRepository.OrdenamientoTopologicoCamino(start, end);
+        }
 
     }
 }
