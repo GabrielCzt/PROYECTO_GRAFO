@@ -1,7 +1,9 @@
-﻿using System;
+﻿using BackendGrafo.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Http;
 
 namespace BackendGrafo.DAL
 {
@@ -177,6 +179,63 @@ namespace BackendGrafo.DAL
 
             return resultado;
         }
+
+        public static List<int> Dijkstra(int start, int end)
+        {
+            int n = ListaAdyacencia.Count;
+            float[] dist = new float[n];
+            int[] prev = new int[n];
+            bool[] visited = new bool[n];
+
+            for (int i = 0; i < n; i++)
+            {
+                dist[i] = float.MaxValue;
+                prev[i] = -1;
+                visited[i] = false;
+            }
+
+            dist[start] = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                int u = -1;
+                for (int j = 0; j < n; j++)
+                {
+                    if (!visited[j] && (u == -1 || dist[j] < dist[u]))
+                    {
+                        u = j;
+                    }
+                }
+
+                if (dist[u] == float.MaxValue)
+                    break;
+
+                visited[u] = true;
+
+                foreach (int v in ListaAdyacencia[u].MuestraAristas())
+                {
+                    float alt = dist[u] + ListaAdyacencia[u].ListaEnlaces.ObtenerCosto(v);
+                    if (alt < dist[v])
+                    {
+                        dist[v] = alt;
+                        prev[v] = u;
+                    }
+                }
+            }
+
+            List<int> path = new List<int>();
+            for (int at = end; at != -1; at = prev[at])
+            {
+                path.Add(at);
+            }
+            path.Reverse();
+
+            if (path[0] == start)
+                return path;
+            else
+                return new List<int>(); // No hay camino
+        }
+
 
 
     }

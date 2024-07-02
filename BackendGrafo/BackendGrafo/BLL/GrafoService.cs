@@ -47,5 +47,11 @@ namespace BackendGrafo.BLL
             return GrafoRepository.OrdenamientoTopologicoCamino(start, end);
         }
 
+        public List<int> Dijkstra(int start, int end)
+        {
+            return GrafoRepository.Dijkstra(start, end);
+        }
+
+
     }
 }
