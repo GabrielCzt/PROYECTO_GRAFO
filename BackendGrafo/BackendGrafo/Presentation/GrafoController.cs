@@ -67,6 +67,22 @@ namespace BackendGrafo.Presentation
                 return NotFound();
             return Ok(result);
         }
+
+         [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/orden-topologico")]
+        public IHttpActionResult OrdenTopologicoCamino()
+        {
+            var result = _grafoService.OrdenTopologico();
+            return Ok(result);
+        }
+
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/orden-topologico-camino/{inicio}/{fin}")]
+        public IHttpActionResult OrdenTopologicoCamino(int inicio, int fin)
+        {
+            var result = _grafoService.OrdenamientoTopologicoCamino(inicio, fin);
+            return Ok(result);
+        }
             
 
     }

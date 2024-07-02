@@ -67,5 +67,92 @@ namespace BackendGrafo.DAL
             return visitados;
         }
 
+         public static List<int> OrdenTopologico()
+        {
+            List<int> resultado = new List<int>();
+            Stack<int> stack = new Stack<int>();
+            bool[] visitado = new bool[ListaAdyacencia.Count];
+
+            for (int i = 0; i < ListaAdyacencia.Count; i++)
+            {
+                if (!visitado[i])
+                {
+                    UtilidadOrdenamientoTopologico(i, visitado, stack);
+                }
+            }
+
+            while (stack.Count > 0)
+            {
+                resultado.Add(stack.Pop());
+            }
+
+            return resultado;
+        }
+
+        private static void UtilidadOrdenamientoTopologico(int v, bool[] visitado, Stack<int> stack)
+        {
+            visitado[v] = true;
+
+            foreach (int vecino in ListaAdyacencia[v].MuestraAristas())
+            {
+                if (!visitado[vecino])
+                {
+                    UtilidadOrdenamientoTopologico(vecino, visitado, stack);
+                }
+            }
+
+            stack.Push(v);
+        }
+
+        public static List<int> OrdenamientoTopologicoCamino(int start, int end)
+        {
+            List<int> resultado = new List<int>();
+            List<int> _ordenTopologico = OrdenTopologico();
+            bool[] visitado = new bool[ListaAdyacencia.Count];
+
+            if (!_ordenTopologico.Contains(start) || !_ordenTopologico.Contains(end))
+            {
+                return resultado; // Si alguno de los vértices no está en el orden topológico, no hay camino
+            }
+
+            int startIndex = _ordenTopologico.IndexOf(start);
+            int endIndex = _ordenTopologico.IndexOf(end);
+
+            if (startIndex > endIndex)
+            {
+                return resultado; // Si el inicio está después del final en el orden topológico, no hay camino
+            }
+
+            Stack<int> stack = new Stack<int>();
+            stack.Push(start);
+
+            while (stack.Count > 0)
+            {
+                int current = stack.Pop();
+                resultado.Add(current);
+                visitado[current] = true;
+
+                if (current == end)
+                {
+                    break; // Se encontró el camino
+                }
+
+                foreach (int vecino in ListaAdyacencia[current].MuestraAristas())
+                {
+                    if (!visitado[vecino] && _ordenTopologico.IndexOf(vecino) > startIndex)
+                    {
+                        stack.Push(vecino);
+                    }
+                }
+            }
+
+            if (resultado[resultado.Count - 1] != end)
+            {
+                resultado.Clear(); // No se encontró un camino
+            }
+
+            return resultado;
+        }
+
     }
 }
