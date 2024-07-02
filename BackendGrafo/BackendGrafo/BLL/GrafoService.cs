@@ -29,6 +29,14 @@ namespace BackendGrafo.BLL
         {
             return GrafoRepository.MostrarVertices();
         }
+        public List<int> RecorridoDFS(int start)
+        {
+            return GrafoRepository.RecorridoDFS(start);
+        }
+        public List<int> RecorridoBFS(int start)
+        {
+            return GrafoRepository.RecorridoBFS(start);
+        }
 
     }
 }

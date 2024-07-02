@@ -57,7 +57,26 @@ namespace BackendGrafo.Presentation
             }
             return Ok(vertices);
         }
-      
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/dfs/{inicio}")]
+        public IHttpActionResult RecorridoDFS(int inicio)
+        {
+            var result = _grafoService.RecorridoDFS(inicio);
+            if (result == null || result.Count == 0)
+                return NotFound();
+            return Ok(result);
+        }
+
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/bfs/{inicio}")]
+        public IHttpActionResult RecorridoBFS(int inicio)
+        {
+            var result = _grafoService.RecorridoBFS(inicio);
+            if (result == null || result.Count == 0)
+                return NotFound();
+            return Ok(result);
+        }
+
 
     }
     public class AristaInputModel
