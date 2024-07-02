@@ -33,6 +33,11 @@ async function agregarVertice() {
     const habitantes = document.getElementById('habitantes').value;
     const superficie = document.getElementById('superficie').value;
 
+    if (!nombreCiudad || !habitantes || !superficie) {
+        alert('Por favor, completa todos los campos para agregar un vértice.');
+        return;
+    }
+
     await fetch('http://localhost:53113/api/grafo/agregar-vertice', {
         method: 'POST',
         headers: {
@@ -51,6 +56,11 @@ async function agregarArista() {
     const origen = document.getElementById('origen').value;
     const destino = document.getElementById('destino').value;
     const costo = document.getElementById('costo').value;
+
+    if (!origen || !destino || !costo) {
+        alert('Por favor, completa todos los campos para agregar una arista.');
+        return;
+    }
 
     await fetch('http://localhost:53113/api/grafo/agregar-arista', {
         method: 'POST',
@@ -133,7 +143,5 @@ async function dijkstra() {
     const nombres = resultado.map(index => vertices[index].NomCiudad);
     document.getElementById('resultados').innerText = `Dijkstra: ${nombres.join(', ')}`;
 }
-
-
 
 window.onload = obtenerVertices;
