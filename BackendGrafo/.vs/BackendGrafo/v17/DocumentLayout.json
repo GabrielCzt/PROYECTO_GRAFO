@@ -70,8 +70,7 @@
               "RelativeToolTip": "BackendGrafo\\Presentation\\GrafoController.cs",
               "ViewState": "AQIAAEkAAAAAAAAAAAAYwGQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-01T21:57:26.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-01T21:57:26.914Z"
             },
             {
               "$type": "Document",
@@ -117,7 +116,7 @@
               "RelativeDocumentMoniker": "BackendGrafo\\DAL\\GrafoRepository.cs",
               "ToolTip": "C:\\Users\\gabri\\OneDrive\\Documentos\\9B\\DESARROLLO WEB INTEGRAL\\ProyectoGrafo\\PROYECTO_GRAFO\\BackendGrafo\\BackendGrafo\\DAL\\GrafoRepository.cs",
               "RelativeToolTip": "BackendGrafo\\DAL\\GrafoRepository.cs",
-              "ViewState": "AQIAANcAAAAAAAAAAAAgwOwAAAAJAAAA",
+              "ViewState": "AQIAAK4AAAAAAAAAAAAYwOwAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-01T21:55:41.095Z",
               "EditorCaption": ""
@@ -144,8 +143,7 @@
               "RelativeToolTip": "BackendGrafo\\BLL\\GrafoService.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAiwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T22:24:58.702Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T22:24:58.702Z"
             }
           ]
         }

@@ -3,6 +3,29 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
+    background-color: #f4f0ff;
+    /* Color morado claro */
+    color: #333;
+}
+
+header {
+    background-color: #b29dd9;
+    /* Color morado más oscuro para el header */
+    padding: 20px 0;
+    color: white;
+}
+
+header h1 {
+    margin: 0;
+}
+
+footer {
+    background-color: #b29dd9;
+    /* Color morado más oscuro para el footer */
+    padding: 10px 0;
+    color: white;
+    width: 100%;
+
 }
 
 canvas {
@@ -10,6 +33,43 @@ canvas {
     margin-top: 20px;
 }
 
-div {
-    margin: 20px;
+main {
+    padding: 20px;
+    padding-bottom: 60px;
+    /* Espacio extra para el footer */
+}
+
+.input-section {
+    background-color: #e6e0f8;
+    /* Color morado muy claro para las secciones de entrada */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.input-section h2 {
+    margin-top: 0;
+}
+
+input,
+button {
+    margin: 10px 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #b29dd9;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9c8ccf;
+}
+
+.nombres{
+    list-style: none;
 }
