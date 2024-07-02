@@ -39,5 +39,33 @@ namespace BackendGrafo.DAL
             return ListaAdyacencia.Select(v => v.info).ToList();
         }
 
+        public static List<int> RecorridoDFS(int start)
+        {
+            List<int> visitados = new List<int>();
+            bool[] visitado = new bool[ListaAdyacencia.Count];
+            Stack<int> pila = new Stack<int>();
+            pila.Push(start);
+
+            while (pila.Count > 0)
+            {
+                int vertice = pila.Pop();
+                if (!visitado[vertice])
+                {
+                    visitado[vertice] = true;
+                    visitados.Add(vertice);
+
+                    foreach (var vecino in ListaAdyacencia[vertice].MuestraAristas())
+                    {
+                        if (!visitado[vecino])
+                        {
+                            pila.Push(vecino);
+                        }
+                    }
+                }
+            }
+
+            return visitados;
+        }
+
     }
 }

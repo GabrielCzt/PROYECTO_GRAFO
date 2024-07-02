@@ -57,7 +57,17 @@ namespace BackendGrafo.Presentation
             }
             return Ok(vertices);
         }
-      
+
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/dfs/{inicio}")]
+        public IHttpActionResult RecorridoDFS(int inicio)
+        {
+            var result = _grafoService.RecorridoDFS(inicio);
+            if (result == null || result.Count == 0)
+                return NotFound();
+            return Ok(result);
+        }
+            
 
     }
     public class AristaInputModel
@@ -66,4 +76,6 @@ namespace BackendGrafo.Presentation
         public int VertDest { get; set; }
         public float cost3 { get; set; }
     }
+
+    
 }
