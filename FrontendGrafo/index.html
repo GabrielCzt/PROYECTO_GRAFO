@@ -17,17 +17,17 @@
         <section class="input-section">
             <h2>Agregar Vértice</h2>
             <input type="text" id="nombreCiudad" placeholder="Nombre de la ciudad" required>
-            <input type="number" id="habitantes" placeholder="Total de habitantes" required>
-            <input type="number" id="superficie" placeholder="Superficie en km²" required>
+            <input type="number" id="habitantes" placeholder="Total de habitantes" required min="0">
+            <input type="number" id="superficie" placeholder="Superficie en km²" required min="0">
             <button onclick="agregarVertice()">Agregar Vértice</button>
         </section>
 
         <section class="input-section">
             <h2>Agregar Arista</h2>
             <small>Inserte el ID de las ciudades para ligarlas</small>
-            <input type="number" id="origen" placeholder="Origen" required>
-            <input type="number" id="destino" placeholder="Destino" required>
-            <input type="number" id="costo" placeholder="Costo" required>
+            <input type="number" id="origen" placeholder="Origen" required min="0">
+            <input type="number" id="destino" placeholder="Destino" required min="0">
+            <input type="number" id="costo" placeholder="Costo" required min="0">
             <button onclick="agregarArista()">Agregar Arista</button>
         </section>
 
