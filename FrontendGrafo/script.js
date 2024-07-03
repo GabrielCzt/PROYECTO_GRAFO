@@ -108,7 +108,7 @@ async function recorridoDFS() {
     const response = await fetch(`http://localhost:53113/api/grafo/dfs/${inicio}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultadosBDFS').innerText = `DFS: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `DFS: ${nombres.join(', ')}`;
 }
 async function buscarCiudad() {
     const ciudad = document.getElementById('buscarCiudad').value;
@@ -117,7 +117,7 @@ async function buscarCiudad() {
     if (response.ok) {
         const resultado = await response.json();
 
-        const resultadosDiv = document.getElementById('resultadosBusqueda');
+        const resultadosDiv = document.getElementById('resultados');
         resultadosDiv.innerHTML = `
             <h2>Información de la Ciudad</h2>
             <ul>
@@ -127,7 +127,7 @@ async function buscarCiudad() {
                 <li><strong>Superficie (km²):</strong> ${resultado.superficieKm}</li>
             </ul>`;
     } else {
-        const resultadosDiv = document.getElementById('resultadosBusqueda');
+        const resultadosDiv = document.getElementById('resultados');
         resultadosDiv.innerHTML = `<p>Ciudad no encontrada.</p>`;
     }
 }
@@ -137,14 +137,14 @@ async function recorridoBFS() {
     const response = await fetch(`http://localhost:53113/api/grafo/bfs/${inicio}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultadosBDFS').innerText = `BFS: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `BFS: ${nombres.join(', ')}`;
 }
 
 async function ordenTopologico() {
     const response = await fetch('http://localhost:53113/api/grafo/orden-topologico');
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultadosTopologicos').innerText = `Orden topológico: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `Orden topológico: ${nombres.join(', ')}`;
 }
 
 async function ordenTopologicoCamino() {
@@ -159,7 +159,7 @@ async function ordenTopologicoCamino() {
     const response = await fetch(`http://localhost:53113/api/grafo/orden-topologico-camino/${inicio}/${fin}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultadosTopologicos').innerText = `Orden topológico del camino: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `Orden topológico del camino: ${nombres.join(', ')}`;
 }
 
 async function dijkstra() {
@@ -174,7 +174,7 @@ async function dijkstra() {
     const response = await fetch(`http://localhost:53113/api/grafo/dijkstra/${inicio}/${fin}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultadosDijkstra').innerText = `Dijkstra: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `Dijkstra: ${nombres.join(', ')}`;
 }
 
 window.onload = obtenerVertices;
