@@ -24,7 +24,7 @@
 
         <section class="input-section">
             <h2>Agregar Arista</h2>
-            <small>Inserte el ID de las ciudades para ligarlas</small>
+            <small>Inserte los indices de las ciudades</small>
             <input type="number" id="origen" placeholder="Origen" required min="0">
             <input type="number" id="destino" placeholder="Destino" required min="0">
             <input type="number" id="costo" placeholder="Costo" required min="0">
@@ -35,6 +35,7 @@
         
         <section class="input-section">
             <h2>Recorridos</h2>
+            <small>Inserte los indices de las ciudades</small>
             <input type="number" id="inicioDFS" placeholder="Vértice de inicio DFS">
             <button onclick="recorridoDFS()">Recorrido DFS</button>
             <input type="number" id="inicioBFS" placeholder="Vértice de inicio BFS">
@@ -50,7 +51,7 @@
         <div id="resultadosBusqueda"></div>
         <section class="input-section">
             <h2>Ordenamiento Topológico</h2>
-            <small>Inserte los ID de inicio y fin para el recorrido</small>
+            <small>Inserte los indices de inicio y fin para el recorrido</small>
             <input type="number" id="inicioTopSort" placeholder="Inicio" required>
             <input type="number" id="finTopSort" placeholder="Fin" required>
             <button onclick="ordenTopologicoCamino()">Buscar Camino Topológico</button>
@@ -59,7 +60,7 @@
         <div id="resultadosTopologicos"></div>
         <section class="input-section">
             <h2>Camino Más Corto (Dijkstra)</h2>
-            <small>Inserte los ID de inicio y fin para el camino más corto</small>
+            <small>Inserte los indices de inicio y fin para el camino más corto</small>
             <input type="number" id="inicioDijkstra" placeholder="Inicio" required>
             <input type="number" id="finDijkstra" placeholder="Fin" required>
             <button onclick="dijkstra()">Camino Más Corto (Dijkstra)</button>
