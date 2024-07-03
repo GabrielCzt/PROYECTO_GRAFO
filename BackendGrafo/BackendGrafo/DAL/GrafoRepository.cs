@@ -11,27 +11,51 @@ namespace BackendGrafo.DAL
 
         public static string AgregarVertice(ciudad objInfo)
         {
-            ListaAdyacencia.Add(new Vertice(objInfo));
-            return "Insertado";
+            try
+            {
+                ListaAdyacencia.Add(new Vertice(objInfo));
+                return "Insertado";
+            }
+            catch (Exception ex)
+            {
+                return $"Error al agregar el vértice: {ex.Message}";
+            }
         }
 
         public static string AgregarArista(int VertOrign, int VertDest, float cost3)
         {
-            if (VertOrign >= 0 && VertOrign < ListaAdyacencia.Count && VertDest >= 0 && VertDest < ListaAdyacencia.Count)
+            try
             {
+                if (VertOrign < 0 || VertOrign >= ListaAdyacencia.Count || VertDest < 0 || VertDest >= ListaAdyacencia.Count)
+                {
+                    throw new Exception("La posición del origen o destino no es válida.");
+                }
+
                 ListaAdyacencia[VertOrign].AgregarArista(VertDest, cost3);
                 return "Arista Agregada";
             }
-            return "La posición del origen o destino no es válida";
+            catch (Exception ex)
+            {
+                return $"Error al agregar la arista: {ex.Message}";
+            }
         }
 
         public static List<int> MostrarAristasVertice(int posiVert)
         {
-            if (posiVert >= 0 && posiVert < ListaAdyacencia.Count)
+            try
             {
+                if (posiVert < 0 || posiVert >= ListaAdyacencia.Count)
+                {
+                    throw new Exception("La posición del vértice no es válida.");
+                }
+
                 return ListaAdyacencia[posiVert].MuestraAristas().ToList();
             }
-            return null;
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al mostrar aristas del vértice: {ex.Message}");
+                return null;
+            }
         }
 
         public static List<ciudad> MostrarVertices()
@@ -40,56 +64,72 @@ namespace BackendGrafo.DAL
         }
         public static List<int> RecorridoDFS(int start)
         {
-            List<int> visitados = new List<int>();
-            bool[] visitado = new bool[ListaAdyacencia.Count];
-            Stack<int> pila = new Stack<int>();
-            pila.Push(start);
-
-            while (pila.Count > 0)
+            try
             {
-                int vertice = pila.Pop();
-                if (!visitado[vertice])
+                List<int> visitados = new List<int>();
+                bool[] visitado = new bool[ListaAdyacencia.Count];
+                Stack<int> pila = new Stack<int>();
+                pila.Push(start);
+
+                while (pila.Count > 0)
                 {
-                    visitado[vertice] = true;
+                    int vertice = pila.Pop();
+                    if (!visitado[vertice])
+                    {
+                        visitado[vertice] = true;
+                        visitados.Add(vertice);
+
+                        foreach (var vecino in ListaAdyacencia[vertice].MuestraAristas())
+                        {
+                            if (!visitado[vecino])
+                            {
+                                pila.Push(vecino);
+                            }
+                        }
+                    }
+                }
+
+                return visitados;
+            }
+            catch
+            {
+                return null;
+            }
+            
+        }
+
+        public static List<int> RecorridoBFS(int start)
+        {
+            try
+            {
+                List<int> visitados = new List<int>();
+                bool[] visitado = new bool[ListaAdyacencia.Count];
+                Queue<int> cola = new Queue<int>();
+                cola.Enqueue(start);
+                visitado[start] = true;
+
+                while (cola.Count > 0)
+                {
+                    int vertice = cola.Dequeue();
                     visitados.Add(vertice);
 
                     foreach (var vecino in ListaAdyacencia[vertice].MuestraAristas())
                     {
                         if (!visitado[vecino])
                         {
-                            pila.Push(vecino);
+                            visitado[vecino] = true;
+                            cola.Enqueue(vecino);
                         }
                     }
                 }
+
+                return visitados;
             }
-
-            return visitados;
-        }
-
-        public static List<int> RecorridoBFS(int start)
-        {
-            List<int> visitados = new List<int>();
-            bool[] visitado = new bool[ListaAdyacencia.Count];
-            Queue<int> cola = new Queue<int>();
-            cola.Enqueue(start);
-            visitado[start] = true;
-
-            while (cola.Count > 0)
+            catch
             {
-                int vertice = cola.Dequeue();
-                visitados.Add(vertice);
-
-                foreach (var vecino in ListaAdyacencia[vertice].MuestraAristas())
-                {
-                    if (!visitado[vecino])
-                    {
-                        visitado[vecino] = true;
-                        cola.Enqueue(vecino);
-                    }
-                }
+                return null;
             }
-
-            return visitados;
+            
         }
 
         public static List<int> OrdenTopologico()
@@ -181,63 +221,78 @@ namespace BackendGrafo.DAL
 
         public static List<int> Dijkstra(int start, int end)
         {
-            int n = ListaAdyacencia.Count;
-            float[] dist = new float[n];
-            int[] prev = new int[n];
-            bool[] visited = new bool[n];
-
-            for (int i = 0; i < n; i++)
+            try
             {
-                dist[i] = float.MaxValue;
-                prev[i] = -1;
-                visited[i] = false;
-            }
+                int n = ListaAdyacencia.Count;
+                float[] dist = new float[n];
+                int[] prev = new int[n];
+                bool[] visited = new bool[n];
 
-            dist[start] = 0;
-
-            for (int i = 0; i < n; i++)
-            {
-                int u = -1;
-                for (int j = 0; j < n; j++)
+                for (int i = 0; i < n; i++)
                 {
-                    if (!visited[j] && (u == -1 || dist[j] < dist[u]))
+                    dist[i] = float.MaxValue;
+                    prev[i] = -1;
+                    visited[i] = false;
+                }
+
+                dist[start] = 0;
+
+                for (int i = 0; i < n; i++)
+                {
+                    int u = -1;
+                    for (int j = 0; j < n; j++)
                     {
-                        u = j;
+                        if (!visited[j] && (u == -1 || dist[j] < dist[u]))
+                        {
+                            u = j;
+                        }
+                    }
+
+                    if (dist[u] == float.MaxValue)
+                        break;
+
+                    visited[u] = true;
+
+                    foreach (int v in ListaAdyacencia[u].MuestraAristas())
+                    {
+                        float alt = dist[u] + ListaAdyacencia[u].ListaEnlaces.ObtenerCosto(v);
+                        if (alt < dist[v])
+                        {
+                            dist[v] = alt;
+                            prev[v] = u;
+                        }
                     }
                 }
 
-                if (dist[u] == float.MaxValue)
-                    break;
-
-                visited[u] = true;
-
-                foreach (int v in ListaAdyacencia[u].MuestraAristas())
+                List<int> path = new List<int>();
+                for (int at = end; at != -1; at = prev[at])
                 {
-                    float alt = dist[u] + ListaAdyacencia[u].ListaEnlaces.ObtenerCosto(v);
-                    if (alt < dist[v])
-                    {
-                        dist[v] = alt;
-                        prev[v] = u;
-                    }
+                    path.Add(at);
                 }
-            }
+                path.Reverse();
 
-            List<int> path = new List<int>();
-            for (int at = end; at != -1; at = prev[at])
+                if (path[0] == start)
+                    return path;
+                else
+                    throw new Exception("No se encontró un camino válido.");
+            }
+            catch 
             {
-                path.Add(at);
+                return new List<int> { -1 }; // Devuelve una lista con un valor que indica error
             }
-            path.Reverse();
-
-            if (path[0] == start)
-                return path;
-            else
-                return new List<int>(); // No hay camino
         }
 
         public static ciudad BuscarCiudadPorNombre(string nombreCiudad)
         {
-            return ListaAdyacencia.Select(v => v.info).FirstOrDefault(c => c.NomCiudad.Equals(nombreCiudad, StringComparison.OrdinalIgnoreCase));
+            try
+            {
+                return ListaAdyacencia.Select(v => v.info).FirstOrDefault(c => c.NomCiudad.Equals(nombreCiudad, StringComparison.OrdinalIgnoreCase));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error al buscar la ciudad por nombre: {ex.Message}");
+                return null;
+            }
         }
 
     }
