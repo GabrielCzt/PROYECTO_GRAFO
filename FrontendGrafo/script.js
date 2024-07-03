@@ -123,21 +123,33 @@ async function ordenTopologico() {
     const response = await fetch('http://localhost:53113/api/grafo/orden-topologico');
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultados').innerText = `Orden topologico: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `Orden topológico: ${nombres.join(', ')}`;
 }
 
 async function ordenTopologicoCamino() {
     const inicio = document.getElementById('inicioTopSort').value;
     const fin = document.getElementById('finTopSort').value;
+
+    if (!inicio || !fin) {
+        alert('Por favor, completa ambos campos (Inicio y Fin) para buscar el camino topológico.');
+        return;
+    }
+
     const response = await fetch(`http://localhost:53113/api/grafo/orden-topologico-camino/${inicio}/${fin}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
-    document.getElementById('resultados').innerText = `Orden topologico del camino: ${nombres.join(', ')}`;
+    document.getElementById('resultados').innerText = `Orden topológico del camino: ${nombres.join(', ')}`;
 }
 
 async function dijkstra() {
     const inicio = document.getElementById('inicioDijkstra').value;
     const fin = document.getElementById('finDijkstra').value;
+
+    if (!inicio || !fin) {
+        alert('Por favor, completa ambos campos (Inicio y Fin) para encontrar el camino más corto.');
+        return;
+    }
+
     const response = await fetch(`http://localhost:53113/api/grafo/dijkstra/${inicio}/${fin}`);
     const resultado = await response.json();
     const nombres = resultado.map(index => vertices[index].NomCiudad);
@@ -145,3 +157,4 @@ async function dijkstra() {
 }
 
 window.onload = obtenerVertices;
+
