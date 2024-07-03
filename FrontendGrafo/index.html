@@ -24,6 +24,7 @@
 
         <section class="input-section">
             <h2>Agregar Arista</h2>
+            <small>Inserte el ID de las ciudades para ligarlas</small>
             <input type="number" id="origen" placeholder="Origen" required>
             <input type="number" id="destino" placeholder="Destino" required>
             <input type="number" id="costo" placeholder="Costo" required>
@@ -31,7 +32,7 @@
         </section>
 
         <canvas id="grafoCanvas" width="800" height="600"></canvas>
-        <div id="resultados"></div>
+        
         <section class="input-section">
             <h2>Recorridos</h2>
             <input type="number" id="inicioDFS" placeholder="Vértice de inicio DFS">
@@ -39,26 +40,31 @@
             <input type="number" id="inicioBFS" placeholder="Vértice de inicio BFS">
             <button onclick="recorridoBFS()">Recorrido BFS</button>
         </section>
+        <div id="resultadosBDFS"></div>
         <section class="input-section">
             <h2>Buscar Ciudad</h2>
+            <small>Ingrese el nombre de la ciudad a buscar</small>
             <input type="text" id="buscarCiudad" placeholder="Nombre de la ciudad">
             <button onclick="buscarCiudad()">Buscar</button>
         </section>
-        
+        <div id="resultadosBusqueda"></div>
         <section class="input-section">
             <h2>Ordenamiento Topológico</h2>
+            <small>Inserte los ID de inicio y fin para el recorrido</small>
             <input type="number" id="inicioTopSort" placeholder="Inicio" required>
             <input type="number" id="finTopSort" placeholder="Fin" required>
             <button onclick="ordenTopologicoCamino()">Buscar Camino Topológico</button>
             <button onclick="ordenTopologico()">Ordenamiento Topológico</button>
         </section>
-
+        <div id="resultadosTopologicos"></div>
         <section class="input-section">
             <h2>Camino Más Corto (Dijkstra)</h2>
+            <small>Inserte los ID de inicio y fin para el camino más corto</small>
             <input type="number" id="inicioDijkstra" placeholder="Inicio" required>
             <input type="number" id="finDijkstra" placeholder="Fin" required>
             <button onclick="dijkstra()">Camino Más Corto (Dijkstra)</button>
         </section>
+        <div id="resultadosDijkstra"></div>
     </main>
 
     <footer>
@@ -75,4 +81,3 @@
 </body>
 
 </html>
-
