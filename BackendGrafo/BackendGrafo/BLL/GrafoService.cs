@@ -54,6 +54,10 @@ namespace BackendGrafo.BLL
             return GrafoRepository.Dijkstra(start, end);
         }
 
+        public ciudad BuscarCiudadPorNombre(string nombreCiudad)
+        {
+            return GrafoRepository.BuscarCiudadPorNombre(nombreCiudad);
+        }
 
 
 

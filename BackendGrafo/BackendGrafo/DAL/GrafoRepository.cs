@@ -234,5 +234,11 @@ namespace BackendGrafo.DAL
             else
                 return new List<int>(); // No hay camino
         }
+
+        public static ciudad BuscarCiudadPorNombre(string nombreCiudad)
+        {
+            return ListaAdyacencia.Select(v => v.info).FirstOrDefault(c => c.NomCiudad.Equals(nombreCiudad, StringComparison.OrdinalIgnoreCase));
+        }
+
     }
 }

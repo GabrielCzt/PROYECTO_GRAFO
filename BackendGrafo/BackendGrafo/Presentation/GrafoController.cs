@@ -101,6 +101,15 @@ namespace BackendGrafo.Presentation
             return Ok(result);
         }
 
+        [System.Web.Http.HttpGet]
+        [System.Web.Http.Route("api/grafo/buscar-ciudad/{nombre}")]
+        public IHttpActionResult BuscarCiudadPorNombre(string nombre)
+        {
+            var ciudad = _grafoService.BuscarCiudadPorNombre(nombre);
+            if (ciudad == null)
+                return NotFound(); // Devuelve 404 si la ciudad no se encuentra
+            return Ok(ciudad);
+        }
 
 
     }

@@ -110,6 +110,27 @@ async function recorridoDFS() {
     const nombres = resultado.map(index => vertices[index].NomCiudad);
     document.getElementById('resultados').innerText = `DFS: ${nombres.join(', ')}`;
 }
+async function buscarCiudad() {
+    const ciudad = document.getElementById('buscarCiudad').value;
+    const response = await fetch(`http://localhost:53113/api/grafo/buscar-ciudad/${ciudad}`);
+
+    if (response.ok) {
+        const resultado = await response.json();
+
+        const resultadosDiv = document.getElementById('resultados');
+        resultadosDiv.innerHTML = `
+            <h2>Información de la Ciudad</h2>
+            <ul>
+                <li><strong>ID Ciudad:</strong> ${resultado.idCiudad}</li>
+                <li><strong>Nombre:</strong> ${resultado.NomCiudad}</li>
+                <li><strong>Habitantes:</strong> ${resultado.totalhabitantes}</li>
+                <li><strong>Superficie (km²):</strong> ${resultado.superficieKm}</li>
+            </ul>`;
+    } else {
+        const resultadosDiv = document.getElementById('resultados');
+        resultadosDiv.innerHTML = `<p>Ciudad no encontrada.</p>`;
+    }
+}
 
 async function recorridoBFS() {
     const inicio = document.getElementById('inicioBFS').value;
